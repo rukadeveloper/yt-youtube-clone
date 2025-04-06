@@ -14,3 +14,5 @@ export type playList = {
 };
 
 export type getAllPlayList = () => Promise<playList[]>;
+
+export type clickClose = (() => void) | undefined;

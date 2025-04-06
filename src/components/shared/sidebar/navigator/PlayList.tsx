@@ -7,7 +7,7 @@ export default function PlayList() {
   return (
     <div className="real-playlist flex flex-col">
       {dummyPlaylistArray.map((pl: playList) => (
-        <PlayListNav pl={pl} />
+        <PlayListNav pl={pl} key={pl.id} />
       ))}
     </div>
   );
