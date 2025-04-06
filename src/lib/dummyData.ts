@@ -1,6 +1,7 @@
+import { allSongList, getAllPlayList, playList } from "@/types/types";
 import { getRandomInt } from "./utils";
 
-export const dummyAllSongList = [
+export const dummyAllSongList: allSongList[] = [
   {
     name: "Canopus",
     channelId: 1,
@@ -101,12 +102,14 @@ export const dummyAllSongList = [
   },
 ];
 
-export const getSongsBychannel = (channel) => {
-  return dummyAllSongList.filter((song) => song.channel === channel);
+export const getSongsBychannel = (channel: string) => {
+  return dummyAllSongList.filter(
+    (song: allSongList) => song.channel === channel
+  );
 };
 
 // playlist
-export const dummyPlaylistArray = [
+export const dummyPlaylistArray: playList[] = [
   {
     id: 1,
     owner: "50meru",
@@ -143,13 +146,15 @@ export const dummyPlaylistArray = [
   },
 ];
 
-export const getAllPlaylist = async () => [...dummyPlaylistArray];
+export const getAllPlaylist: getAllPlayList = async () => [
+  ...dummyPlaylistArray,
+];
 
-export const getPlaylistByOwner = (owner) => {
+export const getPlaylistByOwner = (owner: string) => {
   return dummyPlaylistArray.filter((playlist) => playlist.owner === owner);
 };
 
-export const getPlaylistById = async (id) => {
+export const getPlaylistById = async (id: number) => {
   return dummyPlaylistArray.filter((playlist) => playlist.id === id)?.[0];
 };
 
@@ -207,7 +212,7 @@ export const dummyChannelList = [
   },
 ];
 
-export const getChannelById = async (id) => {
+export const getChannelById = async (id: number) => {
   return dummyChannelList.filter((channel) => channel.id === id)?.[0];
 };
 
