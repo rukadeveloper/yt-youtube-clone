@@ -1,5 +1,11 @@
-import { allSongList, getAllPlayList, playList } from "@/types/types";
+import {
+  allSongList,
+  getAllPlayList,
+  homeCategory,
+  playList,
+} from "@/types/types";
 import { getRandomInt } from "./utils";
+import PlayList from "../components/shared/sidebar/navigator/PlayList";
 
 export const dummyAllSongList: allSongList[] = [
   {
@@ -7,98 +13,98 @@ export const dummyAllSongList: allSongList[] = [
     channelId: 1,
     channel: "50meru",
     src: "/music/50meru - Canopus.mp4",
-    imageSrc: "/img/50meru - Canopus.jpeg",
+    imageSrc: "/images/50meru - Canopus.jpeg",
   },
   {
     name: "Vega",
     channelId: 1,
     channel: "50meru",
     src: "/music/50meru - Vega.mp4",
-    imageSrc: "/img/50meru - Vega.jpeg",
+    imageSrc: "/images/50meru - Vega.jpeg",
   },
   {
     name: "aldebaran",
     channelId: 1,
     channel: "50meru",
     src: "/music/50meru - aldebaran.mp4",
-    imageSrc: "/img/50meru - aldebaran.jpeg",
+    imageSrc: "/images/50meru - aldebaran.jpeg",
   },
   {
     name: "constellations",
     channelId: 1,
     channel: "50meru",
     src: "/music/50meru - constellations.mp4",
-    imageSrc: "/img/50meru - constellations.jpeg",
+    imageSrc: "/images/50meru - constellations.jpeg",
   },
   {
     name: "불 붙인 양초",
     channelId: 2,
     channel: "CattyBGM",
     src: "/music/CattyBGM - 불 붙인 양초.mp4",
-    imageSrc: "/img/CattyBGM - 불 붙인 양초.jpeg",
+    imageSrc: "/images/CattyBGM - 불 붙인 양초.jpeg",
   },
   {
     name: "신난 양말",
     channelId: 2,
     channel: "CattyBGM",
     src: "/music/CattyBGM - 신난 양말.mp4",
-    imageSrc: "/img/CattyBGM - 신난 양말.jpeg",
+    imageSrc: "/images/CattyBGM - 신난 양말.jpeg",
   },
   {
     name: "고양이 코",
     channelId: 2,
     channel: "CattyBGM",
     src: "/music/CattyBGM - 고양이 코.mp4",
-    imageSrc: "/img/CattyBGM - 고양이 코.jpeg",
+    imageSrc: "/images/CattyBGM - 고양이 코.jpeg",
   },
   {
     name: "휴화산",
     channelId: 2,
     channel: "CattyBGM",
     src: "/music/CattyBGM - 휴화산.mp4",
-    imageSrc: "/img/CattyBGM - 휴화산.jpeg",
+    imageSrc: "/images/CattyBGM - 휴화산.jpeg",
   },
   {
     name: "butter",
     channelId: 3,
     channel: "ClearnEars",
     src: "/music/ClearnEars - butter.mp4",
-    imageSrc: "/img/ClearnEars - butter.jpeg",
+    imageSrc: "/images/ClearnEars - butter.jpeg",
   },
   {
     name: "크리스마스",
     channelId: 3,
     channel: "ClearnEars",
     src: "/music/ClearnEars - Christmas.mp4",
-    imageSrc: "/img/ClearnEars - Christmas.jpeg",
+    imageSrc: "/images/ClearnEars - Christmas.jpeg",
   },
   {
     name: "붕 뜬 코끼리",
     channelId: 4,
     channel: "daldam music",
     src: "/music/daldam music - 붕 뜬 코끼리.mp4",
-    imageSrc: "/img/daldam music - 붕 뜬 코끼리.jpeg",
+    imageSrc: "/images/daldam music - 붕 뜬 코끼리.jpeg",
   },
   {
     name: "밥",
     channelId: 4,
     channel: "daldam music",
     src: "/music/daldam music - 밥.mp4",
-    imageSrc: "/img/daldam music - 밥.jpeg",
+    imageSrc: "/images/daldam music - 밥.jpeg",
   },
   {
     name: "차",
     channelId: 4,
     channel: "daldam music",
     src: "/music/daldam music - 차.mp4",
-    imageSrc: "/img/daldam music - 차.jpeg",
+    imageSrc: "/images/daldam music - 차.jpeg",
   },
   {
     name: "목욕오리",
     channelId: 4,
     channel: "daldam music",
     src: "/music/daldam music - 목욕오리.mp4",
-    imageSrc: "/img/daldam music - 목욕오리.jpeg",
+    imageSrc: "/images/daldam music - 목욕오리.jpeg",
   },
 ];
 
@@ -155,11 +161,13 @@ export const getPlaylistByOwner = (owner: string) => {
 };
 
 export const getPlaylistById = async (id: number) => {
-  return dummyPlaylistArray.filter((playlist) => playlist.id === id)?.[0];
+  return dummyPlaylistArray.filter(
+    (playlist: playList) => playlist.id === id
+  )?.[0];
 };
 
 export const getSongListTop10 = async () =>
-  dummyAllSongList.map((song, idx) => {
+  dummyAllSongList.map((song: allSongList, idx: number) => {
     return {
       rank: idx,
       prevRank: idx + getRandomInt(-3, 3),
@@ -217,7 +225,7 @@ export const getChannelById = async (id: number) => {
 };
 
 // home - 카테고리
-export const homeCategoryList = [
+export const homeCategoryList: homeCategory[] = [
   {
     label: "운동",
     src: "https://images.unsplash.com/photo-1487956382158-bb926046304a",
@@ -262,7 +270,7 @@ export const homeCategoryList = [
 
 // 분위기 및 장르
 // Array.from(document.querySelectorAll("#items")[7].querySelectorAll("button")).map( el => el.textContent.replaceAll("\n","").trim())
-export const dymmyGenreList = [
+export const dummyGenreList = [
   "잠잘 때",
   "인디 & 얼터너티브",
   "계절 변화를 위한 테마",

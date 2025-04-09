@@ -1,9 +1,12 @@
-import GradientImage from "@/components/shared/main/GradientImage";
+import HomeMainContents from "@/components/shared/main/HomeMainContents";
+import { sleep } from "@/lib/utils";
 
-export default function Home() {
+export default async function Home() {
+  await sleep(2000);
+
   return (
     <>
-      <GradientImage />
+      <HomeMainContents />
     </>
   );
 }

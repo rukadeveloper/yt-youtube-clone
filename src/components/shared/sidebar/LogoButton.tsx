@@ -1,20 +1,30 @@
 import React from "react";
 import MainLogo from "./MainLogo";
-import HamButton from "./HamButton";
-import CloseButton from "./CloseButton";
-import { clickClose } from "@/types/types";
+import SharedButton from "./SharedButton";
+import { click } from "@/types/types";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 export default function LogoButton({
   isInDrawer = false,
   clickClose,
 }: {
   isInDrawer: boolean;
-  clickClose?: clickClose;
+  clickClose?: click;
 }) {
   return (
     <div className="logo-and-button flex flex-row-reverse justify-end items-center gap-5 p-5">
       <MainLogo />
-      {isInDrawer ? <CloseButton clickClose={clickClose} /> : <HamButton />}
+      {isInDrawer ? (
+        <SharedButton
+          buttonComponent={<IoClose size={24} color="#fff" />}
+          click={clickClose}
+        />
+      ) : (
+        <SharedButton
+          buttonComponent={<RxHamburgerMenu size={24} color="#fff" />}
+        />
+      )}
     </div>
   );
 }

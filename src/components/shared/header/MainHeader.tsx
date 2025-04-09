@@ -6,8 +6,9 @@ import CastButton from "./CastButton";
 import SearchHeader from "./SearchHeader";
 import CustomDrawer from "./CustomDrawer";
 import MainLogo from "../sidebar/MainLogo";
-import HamButton from "../sidebar/HamButton";
+import SharedButton from "../sidebar/SharedButton";
 import { cn } from "@/lib/utils";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function MainHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,9 @@ export default function MainHeader() {
         isOpen={isOpen}
         setIsOpen={setIsOpen}>
         <MainLogo />
-        <HamButton />
+        <SharedButton
+          buttonComponent={<RxHamburgerMenu size={24} color="#fff" />}
+        />
       </CustomDrawer>
       <SearchHeader />
     </div>

@@ -4,6 +4,7 @@ import "./globals.css";
 import SideBar from "@/components/shared/sidebar/SideBar";
 import MainHeader from "@/components/shared/header/MainHeader";
 import PagePadding from "@/components/shared/main/PagePadding";
+import GradientImage from "@/components/shared/main/GradientImage";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,15 +27,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div id="root" className="flex h-screen">
+        <div id="root" className="flex min-h-screen">
           <SideBar />
           <main className="flex-1 h-full main-content relative">
             <PagePadding>
               <MainHeader />
-              <div className="main-content-wrapper">{children}</div>
+              <GradientImage />
+              <div className="main-content-wrapper relative z-[60]">
+                {children}
+              </div>
             </PagePadding>
           </main>
         </div>
