@@ -7,8 +7,7 @@ import { homeCategory } from "@/types/types";
 import { cn } from "@/lib/utils";
 
 export default function Category() {
-  const { homeCategory, headerImageSrc, setHomeCategory, setHeaderImageSrc } =
-    useUIState();
+  const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
 
   const clickEmotion = (item: homeCategory) => {
     if (homeCategory === item.label) {

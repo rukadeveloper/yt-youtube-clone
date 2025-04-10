@@ -14,12 +14,12 @@ export function getRandomInt(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export function getRandomElementFromArray(arr: any[]) {
+export function getRandomElementFromArray(arr: unknown[]) {
   const len = arr?.length;
   return arr[getRandomInt(0, len - 1)];
 }
 
-export function chunkArray(arr: any[], chunkSize: number) {
+export function chunkArray(arr: unknown[], chunkSize: number) {
   const resultArray = [];
   for (let i = 0; i < arr.length; i += chunkSize) {
     const chunk = arr.slice(i, i + chunkSize);

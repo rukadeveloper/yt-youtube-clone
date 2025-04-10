@@ -5,8 +5,7 @@ import Image from "next/image";
 import React from "react";
 
 export default function GradientImage() {
-  const { homeCategory, headerImageSrc, setHomeCategory, setHeaderImageSrc } =
-    useUIState();
+  const { headerImageSrc } = useUIState();
 
   return (
     <div className="gradient-image-wrapper absolute left-0 right-0 top-0">

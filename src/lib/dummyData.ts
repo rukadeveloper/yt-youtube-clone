@@ -5,7 +5,6 @@ import {
   playList,
 } from "@/types/types";
 import { getRandomInt } from "./utils";
-import PlayList from "../components/shared/sidebar/navigator/PlayList";
 
 export const dummyAllSongList: allSongList[] = [
   {

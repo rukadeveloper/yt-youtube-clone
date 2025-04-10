@@ -5,7 +5,7 @@ import PlayListHeaderText from "./PlayListHeaderText";
 import { getRandomElementFromArray } from "@/lib/utils";
 
 export default function PlayListHeader({ playlist }: { playlist: playList }) {
-  const { playlistName, owner, songList } = playlist;
+  const { songList } = playlist;
 
   const randomSong = getRandomElementFromArray(songList);
 

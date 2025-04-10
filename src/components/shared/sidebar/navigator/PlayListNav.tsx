@@ -7,7 +7,7 @@ import { FaPlayCircle } from "react-icons/fa";
 
 export default function PlayListNav({ pl }: { pl: playList }) {
   const { addSongList } = usePlayerState();
-  const { id, owner, playlistName, songList } = pl;
+  const { owner, playlistName, songList } = pl;
   const clickPlay = () => {
     //TODO : Play Music
     addSongList(songList);

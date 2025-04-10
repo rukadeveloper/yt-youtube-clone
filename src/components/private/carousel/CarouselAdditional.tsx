@@ -13,7 +13,7 @@ export default function CarouselAdditional({
   playList: playList;
 }) {
   const { addSongList } = usePlayerState();
-  const { id, owner, playlistName, songList } = playList;
+  const { id, songList } = playList;
   const { push } = useRouter();
 
   const moreButton = () => {

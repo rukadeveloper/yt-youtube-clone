@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  GenreListCarouselProps,
-  SongListCarouselProps,
-  TopSong,
-} from "@/types/types";
+import { GenreListCarouselProps } from "@/types/types";
 import {
   Carousel,
   CarouselContent,
@@ -12,7 +8,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import PlayListTitle from "./PlayListTitle";
-import SongColumn from "./SongColumn";
 import { chunkArray } from "@/lib/utils";
 import GenreColumn from "./GenreColumn";
 

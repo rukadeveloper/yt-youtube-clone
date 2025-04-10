@@ -7,7 +7,7 @@ export default function SongCardRowWrapper({
 }: {
   playlist: playList;
 }) {
-  const { playlistName, owner, songList } = playlist;
+  const { songList } = playlist;
 
   return (
     <div className="song-card-row-wrapper flex flex-col gap-6">
