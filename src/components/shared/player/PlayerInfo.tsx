@@ -9,7 +9,7 @@ export default function PlayerInfo({
 }) {
   return (
     <div className="player-info absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center gap-3">
-      <div className="image-wrapper w-[80px] h-[40px] relative">
+      <div className="image-wrapper w-[80px] h-[40px] relative lg:block hidden">
         <Image
           src={activeSong.imageSrc}
           fill

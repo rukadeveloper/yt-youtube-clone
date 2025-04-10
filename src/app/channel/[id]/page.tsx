@@ -3,6 +3,8 @@ import { getRandomElementFromArray, sleep } from "@/lib/utils";
 import { getChannelById } from "@/lib/dummyData";
 import { permanentRedirect } from "next/navigation";
 import HeaderBackChanger from "@/components/shared/playlist/HeaderBackChanger";
+import ChannelHeaderInfo from "@/components/router/channel/ChannelHeaderInfo";
+import ChannelSongListInfo from "@/components/router/channel/ChannelSongListInfo";
 
 export default async function ChannelPage({
   params,
@@ -21,6 +23,8 @@ export default async function ChannelPage({
   return (
     <>
       <HeaderBackChanger imageSrc={imageSrc} />
+      <ChannelHeaderInfo channel={channel} />
+      <ChannelSongListInfo channel={channel} />
     </>
   );
 }
