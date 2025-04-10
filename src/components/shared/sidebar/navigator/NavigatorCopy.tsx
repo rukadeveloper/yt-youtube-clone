@@ -8,7 +8,7 @@ import { GoHome } from "react-icons/go";
 import { MdOutlineExplore } from "react-icons/md";
 import { IoMusicalNotes } from "react-icons/io5";
 
-export default function Navigator() {
+export default function NavigatorCopy() {
   const pathname = usePathname();
 
   const routes = useMemo(() => {
@@ -35,13 +35,13 @@ export default function Navigator() {
   }, [pathname]);
 
   return (
-    <div className="navigator flex flex-col gap-2 mx-3 pb-3 mlg:mt-[10px] mt-[96px] mlg:border-b mlg:border-solid mlg:border-neutral-700 border-none">
+    <div className="navigator-copy mt-[10px] flex flex-col gap-2 m-3 border-b border-solid border-neutral-700 ">
       {routes.map((r) => (
         <Link
           href={r.href}
           key={r.label}
           className={cn(
-            "each-navigator mlg:text-[16px] text-[12px] text-white px-4 py-3 flex mlg:flex-row flex-col items-center gap-3 hover:bg-neutral-700 mlg:rounded-full rounded-[4px]",
+            "each-navigator text-[16px] text-white px-4 py-3 flex items-center gap-3 hover:bg-neutral-700 rounded-full",
             r.isActive && "bg-neutral-800"
           )}>
           {r.icon}

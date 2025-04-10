@@ -1,13 +1,16 @@
 "use client";
 
-import { playList } from "@/types/types";
 import React from "react";
+import usePlayerState from "@/hooks/usePlayerState";
+import { playList } from "@/types/types";
 import { FaPlayCircle } from "react-icons/fa";
 
 export default function PlayListNav({ pl }: { pl: playList }) {
+  const { addSongList } = usePlayerState();
   const { id, owner, playlistName, songList } = pl;
   const clickPlay = () => {
     //TODO : Play Music
+    addSongList(songList);
   };
 
   return (

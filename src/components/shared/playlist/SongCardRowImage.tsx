@@ -11,6 +11,7 @@ export default function SongCardRowImage({ song }: { song: allSongList }) {
         alt="song_card_img"
         fill
         className="object-cover"
+        suppressHydrationWarning
       />
       <FaGooglePlay className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 hidden group-hover:block" />
     </button>

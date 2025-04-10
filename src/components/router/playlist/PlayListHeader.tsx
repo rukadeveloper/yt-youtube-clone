@@ -10,7 +10,7 @@ export default function PlayListHeader({ playlist }: { playlist: playList }) {
   const randomSong = getRandomElementFromArray(songList);
 
   return (
-    <div className="playlist-header mt-12 flex items-center gap-10">
+    <div className="playlist-header mt-26 flex items-center gap-10">
       <HeaderImage songList={randomSong} />
       <PlayListHeaderText playlist={playlist} />
     </div>

@@ -1,12 +1,16 @@
+"use client";
+
 import React from "react";
 import { playList } from "@/types/types";
 import PlayListHeaderButtons from "./PlayListHeaderButtons";
+import usePlayerState from "@/hooks/usePlayerState";
 
 export default function PlayListHeaderText({
   playlist,
 }: {
   playlist: playList;
 }) {
+  const { addSongList } = usePlayerState();
   const { playlistName, owner, songList } = playlist;
 
   return (
@@ -20,7 +24,7 @@ export default function PlayListHeaderText({
       <span className="block text-[14px] text-neutral-500">
         {songList.length}곡{" "}
       </span>
-      <PlayListHeaderButtons />
+      <PlayListHeaderButtons playlist={playlist} addSongList={addSongList} />
     </div>
   );
 }

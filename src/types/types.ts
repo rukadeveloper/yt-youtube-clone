@@ -15,7 +15,7 @@ export type playList = {
 
 export type getAllPlayList = () => Promise<playList[]>;
 
-export type click = (() => void) | undefined;
+export type click = (() => void) | ((e: any) => void) | undefined;
 
 export type homeCategory = {
   label: string;

@@ -1,59 +1,50 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import CastButton from "./CastButton";
 import SearchHeader from "./SearchHeader";
 import CustomDrawer from "./CustomDrawer";
 import MainLogo from "../sidebar/MainLogo";
 import SharedButton from "../sidebar/SharedButton";
+import PagePadding from "../main/PagePadding";
+import LogoButton from "../sidebar/LogoButton";
 import { cn } from "@/lib/utils";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function MainHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const headerRef = useRef<HTMLDivElement>(null);
 
   const clickClose = () => {
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    if (!headerRef.current) return;
-    const handleScroll = () => {
-      const scrollValue = headerRef.current?.scrollTop;
-      console.log(scrollValue);
-      setIsScrolled(scrollValue !== 0);
-    };
-
-    headerRef.current?.addEventListener("scroll", handleScroll);
-
-    return () => headerRef.current?.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div
       className={cn(
-        "main-header sticky top-0 py-5 z-[20] flex flex-row-reverse gap-4 items-center",
-        isScrolled && "bg-black"
-      )}
-      ref={headerRef}>
-      <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
-      <CastButton />
-      <CustomDrawer
-        clickClose={clickClose}
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}>
-        <MainLogo />
-        <SharedButton
-          buttonComponent={<RxHamburgerMenu size={24} color="#fff" />}
+        "main-header fixed left-0 right-0 top-0 h-[70px] z-[300] bg-black border-b border-neutral-500"
+      )}>
+      <PagePadding className="flex flex-row-reverse gap-4 items-center">
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <CastButton />
+        <CustomDrawer
+          clickClose={clickClose}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}>
+          <MainLogo />
+          <SharedButton
+            buttonComponent={<RxHamburgerMenu size={24} color="#fff" />}
+          />
+        </CustomDrawer>
+        <SearchHeader />
+        <LogoButton
+          className="absolute top-1/2 -translate-y-1/2 left-0"
+          isInDrawer={false}
         />
-      </CustomDrawer>
-      <SearchHeader />
+      </PagePadding>
     </div>
   );
 }

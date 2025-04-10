@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { cn } from "@/lib/utils";
 
-export default function LogoButton({
+export default function LogoButtonCopy({
   isInDrawer = false,
   clickClose,
   className,
@@ -18,7 +18,7 @@ export default function LogoButton({
   return (
     <div
       className={cn(
-        "logo-and-button mlg:flex hidden flex-row-reverse justify-end items-center gap-4 p-3",
+        "logo-and-button flex flex-row-reverse justify-end items-center gap-4 p-3",
         className
       )}>
       <MainLogo />

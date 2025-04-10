@@ -21,7 +21,7 @@ export default function Category() {
   };
 
   return (
-    <ul className="top-category flex flex-wrap gap-4 max-w-full overflow-x-auto xl:w-full sm:w-[600px] w-[350px]">
+    <ul className="top-category flex gap-4 max-w-full overflow-x-auto w-full">
       {homeCategoryList.map((item: homeCategory) => (
         <li
           key={item.label}

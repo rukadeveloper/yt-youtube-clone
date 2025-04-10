@@ -17,6 +17,7 @@ export default function CardImage({
         alt="card-thumbnail"
         fill={true}
         className="object-cover"
+        suppressHydrationWarning
       />
       <CarouselAdditional playList={playList} />
     </div>
