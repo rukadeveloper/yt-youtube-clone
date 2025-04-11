@@ -24,7 +24,6 @@ export default function MobileController({
       <MobileButtons
         state={state}
         volume={volume}
-        setVolume={setVolume}
         volumeChange={volumeChange}
         volumeClick={volumeClick}
       />

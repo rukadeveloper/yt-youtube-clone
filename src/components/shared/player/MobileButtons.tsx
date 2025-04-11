@@ -7,13 +7,11 @@ import { Slider } from "@/components/ui/slider";
 export default function MobileButtons({
   state,
   volume,
-  setVolume,
   volumeChange,
   volumeClick,
 }: {
   state: HTMLMediaState;
   volume: number;
-  setVolume: Dispatch<SetStateAction<number>>;
   volumeChange: (value: number[]) => void;
   volumeClick: () => void;
 }) {

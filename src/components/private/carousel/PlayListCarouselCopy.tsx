@@ -44,7 +44,7 @@ const SongListCarouselCopy: React.FC<PlayListCarouselProps> = ({
         }}
         modules={[FreeMode, Navigation]}>
         {playListArray.map((playList: playList) => (
-          <SwiperSlide>
+          <SwiperSlide key={playList.id}>
             <PlayListCard playList={playList} />
           </SwiperSlide>
         ))}
