@@ -6,13 +6,11 @@ import { IoMdMore } from "react-icons/io";
 export default function MobileController({
   state,
   volume,
-  setVolume,
   volumeChange,
   volumeClick,
 }: {
   state: HTMLMediaState;
   volume: number;
-  setVolume: Dispatch<SetStateAction<number>>;
   volumeChange: (value: number[]) => void;
   volumeClick: () => void;
 }) {

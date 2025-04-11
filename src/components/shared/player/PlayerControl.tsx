@@ -83,7 +83,6 @@ export default function PlayerControl({
       <MobileController
         state={state}
         volume={volume}
-        setVolume={setVolume}
         volumeChange={volumeChange}
         volumeClick={volumeClick}
       />

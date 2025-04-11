@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { HTMLMediaState } from "react-use/lib/factory/createHTMLMediaHook";
 import { CiRepeat } from "react-icons/ci";
 import { IoShuffle, IoVolumeHigh, IoVolumeLow } from "react-icons/io5";
