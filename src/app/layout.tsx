@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/shared/sidebar/SideBar";
-import MainHeader from "@/components/shared/header/MainHeader";
-import PagePadding from "@/components/shared/main/PagePadding";
-import GradientImage from "@/components/shared/main/GradientImage";
-import PlayerWrapper from "@/components/shared/player/PlayerWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,16 +30,7 @@ export default function RootLayout({
         suppressHydrationWarning>
         <div id="root" className="block md:flex min-h-screen">
           <SideBar />
-          <main className="w-auto xs:flex-1 h-full main-content relative">
-            <MainHeader />
-            <GradientImage />
-            <PlayerWrapper />
-            <PagePadding>
-              <div className="main-content-wrapper relative z-[60]">
-                {children}
-              </div>
-            </PagePadding>
-          </main>
+          {children}
         </div>
       </body>
     </html>

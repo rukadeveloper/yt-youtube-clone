@@ -9,7 +9,7 @@ import {
   getAllPlaylist,
   getSongListTop10,
 } from "@/lib/dummyData";
-import PlayListCarousel from "@/components/private/carousel/PlayListCarousel";
+import PlayListCarouselCopy from "@/components/private/carousel/PlayListCarouselCopy";
 import SongListCarousel from "@/components/private/carousel/SongListCarousel";
 import GenreListCarousel from "@/components/private/carousel/GenreListCarousel";
 
@@ -36,12 +36,15 @@ export default async function ExploreCategory() {
 
   return (
     <div className="category-wrapper">
-      <div className="relative flex flex-col lg:flex-row gap-4">
+      <div className="pt-[150px] relative flex flex-col lg:flex-row gap-4">
         {categoryContents.map((cc: cc) => (
           <CategoryMenu key={cc.label} label={cc.label} icon={cc.icon} />
         ))}
       </div>
-      <PlayListCarousel playListArray={playListArray} title="새 앨범 및 싱글" />
+      <PlayListCarouselCopy
+        playListArray={playListArray}
+        title="새 앨범 및 싱글"
+      />
       <SongListCarousel songListTop10={songListTop10} title="인기곡" />
       <GenreListCarousel genreList={dummyGenreList} title="분위기 및 장르" />
     </div>
