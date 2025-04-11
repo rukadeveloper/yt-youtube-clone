@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import CastButton from "./CastButton";
 import SearchHeader from "./SearchHeader";
 import CustomDrawer from "./CustomDrawer";
@@ -9,6 +8,7 @@ import MainLogo from "../sidebar/MainLogo";
 import SharedButton from "../sidebar/SharedButton";
 import PagePadding from "../main/PagePadding";
 import LogoButton from "../sidebar/LogoButton";
+import AvatarProfileButton from "./AvatarProfileButton";
 import { cn } from "@/lib/utils";
 import { RxHamburgerMenu } from "react-icons/rx";
 
@@ -24,11 +24,8 @@ export default function MainHeader() {
       className={cn(
         "main-header fixed left-0 right-0 top-0 h-[70px] z-[300] bg-black border-b border-neutral-500"
       )}>
-      <PagePadding className="flex flex-row-reverse gap-4 items-center">
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+      <PagePadding className="flex flex-row-reverse gap-8 items-center">
+        <AvatarProfileButton />
         <CastButton />
         <CustomDrawer
           clickClose={clickClose}
