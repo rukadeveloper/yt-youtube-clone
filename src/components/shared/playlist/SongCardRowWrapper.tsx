@@ -10,7 +10,7 @@ export default function SongCardRowWrapper({
   const { songList } = playlist;
 
   return (
-    <div className="song-card-row-wrapper flex flex-col gap-6">
+    <div className="song-card-row-wrapper pt-26 flex flex-col gap-6">
       {songList.map((song: allSongList, idx: number) => (
         <SongCardRowExpand song={song} key={idx} />
       ))}

@@ -20,7 +20,7 @@ const GenreListCarousel: React.FC<GenreListCarouselProps> = ({
   const chunkedgenreList = chunkArray(genreList, 4) as string[][];
 
   return (
-    <div className="mt-24 w-full relative z-[100]">
+    <div className="mt-24 pb-24 w-full relative z-[100]">
       <Carousel className="w-full max-w-full">
         <div className="flex justify-between items-center">
           <PlayListTitle
@@ -37,7 +37,9 @@ const GenreListCarousel: React.FC<GenreListCarouselProps> = ({
         </div>
         <CarouselContent>
           {chunkedgenreList?.map((genreList: string[], index: number) => (
-            <CarouselItem key={index} className="basis-1/4">
+            <CarouselItem
+              key={index}
+              className="xl:basis-1/4 lg:basis-1/3 md:basis-1/2 basis-full">
               <GenreColumn genreList={genreList} />
             </CarouselItem>
           ))}
