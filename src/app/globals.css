@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @theme {
+  --breakpoint-xs: 550px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-mlg: 945px;
@@ -15,6 +16,7 @@
 body {
   background-color: rgb(10, 10, 10);
   overflow-x: hidden;
+  font-family: "Noto Sans KR" !important;
 }
 
 .dark {

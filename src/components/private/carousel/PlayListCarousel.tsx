@@ -34,7 +34,9 @@ const SongListCarousel: React.FC<PlayListCarouselProps> = ({
         </div>
         <CarouselContent>
           {playListArray.map((pla: playList, index: number) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <CarouselItem
+              key={index}
+              className="basis-full md:basis-1/2 lg:basis-1/3">
               <PlayListCard playList={pla} />
             </CarouselItem>
           ))}

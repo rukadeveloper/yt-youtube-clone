@@ -8,7 +8,7 @@ export default function HomeMainContents() {
   const dummyPlayListArrayCopy = [...dummyPlaylistArray];
 
   return (
-    <div className="mt-[92px] relative z-[30]">
+    <div className="pt-[92px] relative z-[30]">
       <Category />
       <PlayListCarousel
         playListArray={[...dummyPlayListArrayCopy]}

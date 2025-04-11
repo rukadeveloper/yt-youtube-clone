@@ -32,9 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning>
-        <div id="root" className="flex min-h-screen">
+        <div id="root" className="block md:flex min-h-screen">
           <SideBar />
-          <main className="flex-1 h-full main-content relative">
+          <main className="w-auto xs:flex-1 h-full main-content relative">
             <MainHeader />
             <GradientImage />
             <PlayerWrapper />
