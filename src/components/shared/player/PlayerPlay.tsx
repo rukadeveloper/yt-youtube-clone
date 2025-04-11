@@ -69,10 +69,10 @@ export default function PlayerPlay({
   };
 
   return (
-    <div className="player-play-wrapper h-full flex gap-10 items-center px-10">
+    <div className="player-play-wrapper h-full flex ssm:gap-10 gap-3 items-center px-10">
       <button className="cursor-pointer" onClick={prevButton}>
         <span className="sr-only">이전 재생</span>
-        <IoPlaySkipBackSharp size={24} />
+        <IoPlaySkipBackSharp className="md:text-[24px] text-[20px]" />
       </button>
       <button
         className="cursor-pointer flex items-center"
@@ -81,16 +81,16 @@ export default function PlayerPlay({
         {isLoading ? (
           <ClipLoader color="#fff" />
         ) : state.playing ? (
-          <GiPauseButton size={36} />
+          <GiPauseButton className="md:text-[36px] text-[30px]" />
         ) : (
-          <IoPlaySharp size={36} />
+          <IoPlaySharp className="md:text-[36px] text-[30px]" />
         )}
       </button>
       <button
         className="cursor-pointer disabled:opacity-45"
         onClick={nextButton}>
         <span className="sr-only">다음 재생</span>
-        <IoPlaySkipForward size={24} />
+        <IoPlaySkipForward className="md:text-[24px] text-[20px]" />
       </button>
     </div>
   );

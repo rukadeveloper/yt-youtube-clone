@@ -41,7 +41,7 @@ export default function Navigator() {
           href={r.href}
           key={r.label}
           className={cn(
-            "each-navigator mlg:text-[16px] text-[12px] text-white px-4 py-3 flex mlg:flex-row flex-col items-center gap-3 hover:bg-neutral-700 mlg:rounded-full rounded-[4px]",
+            "each-navigator mlg:text-[16px] text-[12px] text-white mlg:px-4 py-3 px-2 flex mlg:flex-row flex-col items-center gap-3 hover:bg-neutral-700 mlg:rounded-full rounded-[4px]",
             r.isActive && "bg-neutral-800"
           )}>
           {r.icon}

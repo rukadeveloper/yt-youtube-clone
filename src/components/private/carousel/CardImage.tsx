@@ -11,7 +11,7 @@ export default function CardImage({
   playList: playList;
 }) {
   return (
-    <div className="card-image relative h-[236px]">
+    <div className="card-image relative md:h-[236px] h-[416px]">
       <Image
         src={imgSrc}
         alt="card-thumbnail"
