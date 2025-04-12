@@ -4,7 +4,7 @@ import React from "react";
 
 export default function LibraryTopWrapper() {
   return (
-    <div className="library-top-wrapper flex justify-between items-center">
+    <div className="library-top-wrapper flex justify-between items-center pt-[90px]">
       <LibraryCategory />
       <LibraryDropdown />
     </div>
