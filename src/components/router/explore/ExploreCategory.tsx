@@ -10,8 +10,8 @@ import {
   getSongListTop10,
 } from "@/lib/dummyData";
 import PlayListCarouselCopy from "@/components/private/carousel/PlayListCarouselCopy";
-import SongListCarousel from "@/components/private/carousel/SongListCarousel";
 import GenreListCarousel from "@/components/private/carousel/GenreListCarousel";
+import SongListCarousel from "@/components/private/carousel/SongListCarousel";
 
 export default async function ExploreCategory() {
   const categoryContents = [
@@ -45,7 +45,7 @@ export default async function ExploreCategory() {
         playListArray={playListArray}
         title="새 앨범 및 싱글"
       />
-      <SongListCarousel songListTop10={songListTop10} title="인기곡" />
+      <SongListCarousel title="인기곡" />
       <GenreListCarousel genreList={dummyGenreList} title="분위기 및 장르" />
     </div>
   );
