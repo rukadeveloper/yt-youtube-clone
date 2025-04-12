@@ -46,11 +46,7 @@ export default function PlayerText({
         playBack={playBack}
       />
       <PlayerInfo activeSong={activeSong!} />
-      <PlayerControl
-        controls={controls}
-        state={state}
-        activeSong={activeSong!}
-      />
+      <PlayerControl controls={controls} state={state} />
     </div>
   );
 }
