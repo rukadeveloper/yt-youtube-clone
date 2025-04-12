@@ -4,11 +4,7 @@ import { IoMusicalNotesSharp } from "react-icons/io5";
 import { BsTextParagraph } from "react-icons/bs";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
 import { cc } from "@/types/types";
-import {
-  dummyGenreList,
-  getAllPlaylist,
-  getSongListTop10,
-} from "@/lib/dummyData";
+import { dummyGenreList, getAllPlaylist } from "@/lib/dummyData";
 import PlayListCarouselCopy from "@/components/private/carousel/PlayListCarouselCopy";
 import GenreListCarousel from "@/components/private/carousel/GenreListCarousel";
 import SongListCarousel from "@/components/private/carousel/SongListCarousel";
@@ -29,10 +25,7 @@ export default async function ExploreCategory() {
     },
   ];
 
-  const [playListArray, songListTop10] = await Promise.all([
-    getAllPlaylist(),
-    getSongListTop10(),
-  ]);
+  const [playListArray] = await Promise.all([getAllPlaylist()]);
 
   return (
     <div className="category-wrapper">
