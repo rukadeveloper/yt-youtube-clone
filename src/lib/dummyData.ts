@@ -13,6 +13,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "50meru",
     src: "/music/50meru - Canopus.mp4",
     imageSrc: "/images/50meru - Canopus.jpeg",
+    songId: "asdvdfgwefewf",
   },
   {
     name: "Vega",
@@ -20,6 +21,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "50meru",
     src: "/music/50meru - Vega.mp4",
     imageSrc: "/images/50meru - Vega.jpeg",
+    songId: "egfgwefwefw",
   },
   {
     name: "aldebaran",
@@ -27,6 +29,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "50meru",
     src: "/music/50meru - aldebaran.mp4",
     imageSrc: "/images/50meru - aldebaran.jpeg",
+    songId: "gwraesrghaegr",
   },
   {
     name: "constellations",
@@ -34,6 +37,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "50meru",
     src: "/music/50meru - constellations.mp4",
     imageSrc: "/images/50meru - constellations.jpeg",
+    songId: "grgaergaergaew",
   },
   {
     name: "불 붙인 양초",
@@ -41,6 +45,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "CattyBGM",
     src: "/music/CattyBGM - 불 붙인 양초.mp4",
     imageSrc: "/images/CattyBGM - 불 붙인 양초.jpeg",
+    songId: "4gtggerwgwg",
   },
   {
     name: "신난 양말",
@@ -48,6 +53,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "CattyBGM",
     src: "/music/CattyBGM - 신난 양말.mp4",
     imageSrc: "/images/CattyBGM - 신난 양말.jpeg",
+    songId: "vFRBbdbrsbv",
   },
   {
     name: "고양이 코",
@@ -55,6 +61,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "CattyBGM",
     src: "/music/CattyBGM - 고양이 코.mp4",
     imageSrc: "/images/CattyBGM - 고양이 코.jpeg",
+    songId: "bgrggwegewfg",
   },
   {
     name: "휴화산",
@@ -62,6 +69,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "CattyBGM",
     src: "/music/CattyBGM - 휴화산.mp4",
     imageSrc: "/images/CattyBGM - 휴화산.jpeg",
+    songId: "grevrewggw4"
   },
   {
     name: "butter",
@@ -69,6 +77,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "ClearnEars",
     src: "/music/ClearnEars - butter.mp4",
     imageSrc: "/images/ClearnEars - butter.jpeg",
+    songId: "brvfgwwesgweg"
   },
   {
     name: "크리스마스",
@@ -76,6 +85,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "ClearnEars",
     src: "/music/ClearnEars - Christmas.mp4",
     imageSrc: "/images/ClearnEars - Christmas.jpeg",
+    songId: "gvaergvbgw"
   },
   {
     name: "붕 뜬 코끼리",
@@ -83,6 +93,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "daldam music",
     src: "/music/daldam music - 붕 뜬 코끼리.mp4",
     imageSrc: "/images/daldam music - 붕 뜬 코끼리.jpeg",
+    songId: "gerwgw3ggwg23"
   },
   {
     name: "밥",
@@ -90,6 +101,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "daldam music",
     src: "/music/daldam music - 밥.mp4",
     imageSrc: "/images/daldam music - 밥.jpeg",
+    songId: "gregewfgvewefgwe"
   },
   {
     name: "차",
@@ -97,6 +109,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "daldam music",
     src: "/music/daldam music - 차.mp4",
     imageSrc: "/images/daldam music - 차.jpeg",
+    songId: "ggwefweggewgw"
   },
   {
     name: "목욕오리",
@@ -104,6 +117,7 @@ export const dummyAllSongList: allSongList[] = [
     channel: "daldam music",
     src: "/music/daldam music - 목욕오리.mp4",
     imageSrc: "/images/daldam music - 목욕오리.jpeg",
+    songId: "ggvghwggw"
   },
 ];
 

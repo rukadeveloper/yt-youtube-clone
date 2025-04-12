@@ -1,10 +1,13 @@
-import { allSongList } from "@/types/types";
+import { allSongList, playList } from "@/types/types";
 import { create } from "zustand";
 
 interface PlayerState {
   isVisiblePlayer: boolean;
   setIsVisiblePlayer: (isVisiblePlayer: boolean) => void;
   activeSong?: allSongList | null;
+  playingPlayList: playList[];
+  setPlayingPlayList: (ele: playList) => void;
+  setActiveSong: (activeSong: allSongList) => void;
   prevPlayerQueue: allSongList[];
   nextPlayerQueue: allSongList[];
   addSongList: (songList: allSongList[]) => void;
@@ -16,6 +19,13 @@ const usePlayerState = create<PlayerState>((set) => ({
   isVisiblePlayer: false,
   setIsVisiblePlayer: (isVisiblePlayer: boolean) => set({ isVisiblePlayer }),
   activeSong: null,
+  playingPlayList: [],
+  setPlayingPlayList: (ele: playList) =>
+    set((prev) => ({
+      ...prev,
+      playingPlayList: [ele],
+    })),
+  setActiveSong: (activeSong: allSongList) => set({ activeSong }),
   prevPlayerQueue: [],
   nextPlayerQueue: [],
   addSongList: (songList: allSongList[]) =>

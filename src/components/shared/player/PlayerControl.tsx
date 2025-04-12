@@ -1,12 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { HTMLMediaState } from "react-use/lib/factory/createHTMLMediaHook";
 import { IoVolumeHigh, IoShuffle, IoVolumeLow } from "react-icons/io5";
 import { CiRepeat } from "react-icons/ci";
+import { RiArrowDropUpFill } from "react-icons/ri";
 import MobileController from "./MobileController";
 
 import { Slider } from "@/components/ui/slider";
+import { allSongList } from "@/types/types";
+import usePlayerState from "@/hooks/usePlayerState";
+import { dummyPlaylistArray } from "@/lib/dummyData";
 
 interface controls {
   play: () => Promise<void> | undefined;
@@ -20,10 +25,15 @@ interface controls {
 export default function PlayerControl({
   controls,
   state,
+  activeSong,
 }: {
   controls: controls;
   state: HTMLMediaState;
+  activeSong: allSongList;
 }) {
+  const { push } = useRouter();
+  const { songId } = activeSong;
+  const { setActiveSong, setPlayingPlayList } = usePlayerState();
   const [volume, setVolume] = useState(0.5);
   const volumeChange = (value: number[]) => {
     setVolume(value[0]);

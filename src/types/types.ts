@@ -4,6 +4,7 @@ export type allSongList = {
   channel: string;
   src: string;
   imageSrc: string;
+  songId: string;
 };
 
 export type playList = {
