@@ -7,7 +7,6 @@ import { CiRepeat } from "react-icons/ci";
 import MobileController from "./MobileController";
 
 import { Slider } from "@/components/ui/slider";
-import { allSongList } from "@/types/types";
 
 interface controls {
   play: () => Promise<void> | undefined;
