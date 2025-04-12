@@ -31,7 +31,7 @@ const SongListCarouselCopy: React.FC<PlayListCarouselProps> = ({
   playListArray,
 }) => {
   return (
-    <div className="mt-24 w-full relative z-[100] relative">
+    <div className="mt-24 w-full relative z-[100]">
       <PlayListTitle title={title} subTitle={subTitle} thumbnail={thumbnail} />
       <Swiper
         slidesPerView={1}
